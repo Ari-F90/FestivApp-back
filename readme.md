@@ -15,7 +15,7 @@ The app uses the following technologies:
   - React
   - Redux
   - Typescript
-  - SASS
+  - SASS modules
 
 - Back-end:
 
@@ -24,6 +24,8 @@ The app uses the following technologies:
   - MongoDB
   - Mongoose
   - JWT
+  - Firebase
+  - Postman
 
 ## Getting started
 
