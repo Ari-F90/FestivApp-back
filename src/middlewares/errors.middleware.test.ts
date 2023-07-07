@@ -13,44 +13,32 @@ describe('Given errorsMiddleware', () => {
 
   describe('When the error is a mongoose Cast Error', () => {
     test('Then status should be 400', () => {
-      // Arrange
       const error = new MongooseError.CastError('', '', '');
-      // Act
       errorsMiddleware(error, req, resp);
-      // Assert
       expect(resp.status).toHaveBeenLastCalledWith(400);
     });
   });
 
   describe('When the error is a mongoose Validation Error', () => {
     test('Then status should be 406', () => {
-      // Arrange
       const error = new MongooseError.ValidationError();
-      // Act
       errorsMiddleware(error, req, resp);
-      // Assert
       expect(resp.status).toHaveBeenCalledWith(406);
     });
   });
 
   describe('When the error is a custom HTTPError', () => {
     test('Then it HTTPError status', () => {
-      // Arrange
       const error = new HTTPError(418, 'Tea', 'Pot');
-      // Act
       errorsMiddleware(error, req, resp);
-      // Assert
       expect(resp.status).toHaveBeenCalledWith(418);
     });
   });
 
   describe('When the error is any other Error', () => {
     test('Then it should', () => {
-      // Arrange
       const error = new Error('Tea Pot');
-      // Act
       errorsMiddleware(error, req, resp);
-      // Assert
       expect(resp.status).toHaveBeenCalledWith(500);
     });
   });

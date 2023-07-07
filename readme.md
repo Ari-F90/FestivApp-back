@@ -2,7 +2,9 @@
 
 # Festival Marketplace App
 
-This is a full-stack application that allows users to create, update, and delete festivals on a marketplace platform.
+This is a full-stack application (mobile-only) that allows users to create, update, and delete festivals on a marketplace platform.
+
+<img width="901" alt="Captura de pantalla 2023-07-07 a las 19 56 01" src="https://github.com/Ari-F90/FestivApp-front/assets/115626747/76732936-ebb0-4cd5-88ea-eb71e5c50e4d">
 
 ## Technologies Used
 
@@ -68,7 +70,7 @@ POST ➡️ .../users/register
 
 POST ➡️ .../users/login
 
-- Login with an existing user. The required fields will be the email and password.
+- Login with an existing user. The required fields will be the email and the password.
 
 ### FESTIVALS:
 
